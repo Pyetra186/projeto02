@@ -1,0 +1,36 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    color: #5B0B9B;
+    font-size: 4rem;
+    padding-top: 0;
+    padding-top: 30px;
+    margin-left: 800px;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 60px;
+}
+.prt{
+    margin-top: 200px;
+    margin-left: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ing{
+    
+    margin-top: 50px;
+    margin-left: 800px;
+    align-items: center;
+    justify-content: center;
+}
