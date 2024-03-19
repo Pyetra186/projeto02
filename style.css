@@ -28,8 +28,8 @@ h1{
     position: absolute;
     width: 5vh;
     height: 5vh;
-    left: 112vh;
-    top: -10px;
+    left: 128vh;
+    top: -1px;
 }
 
 .ptr{
@@ -39,13 +39,13 @@ h1{
     margin-top: 20vh;
     position: relative;
     padding-bottom: 10vh;
-    margin-left: 150px;
+    
 }
 
 
 input{
     display: grid;
-    width: 47vw;
+    width: 30vw;
     height: 5vh;
     border: none;
     background-color:none;
@@ -54,7 +54,7 @@ input{
 
 .line{
     display: grid;
-    width: 35vw;
+    width: 30vw;
     height: 2px;
     background-color: black;
   
@@ -65,8 +65,8 @@ input{
     position: absolute;
     width: 5vh;
     height: 5vh;
-    left: 112vh;
-    top: -10px;
+    left: 128vh;
+    top: -1px;
     
 }
 
@@ -76,7 +76,7 @@ input{
     display: grid;
     margin-top: 10px;
     position: relative;
-    margin-left: 150px;
+   
     
 }
 
@@ -107,6 +107,6 @@ footer{
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-left: 89vh;
+    margin-left: 90vh;
     top: 20px;
 }
