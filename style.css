@@ -5,7 +5,12 @@
     box-sizing: border-box;
 }
 
-
+.quadrado {
+    height: 100vh;
+    width: 50px;
+    position: absolute;
+    background-color: #5B0B9B;
+}
 h1{
     color: #5B0B9B;
     font-size: 4rem;
@@ -17,20 +22,91 @@ h1{
     justify-content: center;
 }
 
-input{
-    width: 60px;
-}
-.prt{
-    margin-top: 200px;
-    margin-left: 800px;
-    align-items: center;
+.imgptr{
     justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    left: 112vh;
+    top: -10px;
+}
+
+.ptr{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    margin-top: 20vh;
+    position: relative;
+    padding-bottom: 10vh;
+    margin-left: 150px;
+}
+
+
+input{
+    display: grid;
+    width: 47vw;
+    height: 5vh;
+    border: none;
+    background-color:none;
+    
+}
+
+.line{
+    display: grid;
+    width: 35vw;
+    height: 2px;
+    background-color: black;
+  
+}
+
+.imgen{
+    display: flex;
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    left: 112vh;
+    top: -10px;
+    
 }
 
 .ing{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    margin-top: 10px;
+    position: relative;
+    margin-left: 150px;
     
-    margin-top: 50px;
-    margin-left: 800px;
+}
+
+footer{
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 30vh;
+}
+.botao{
+    position: relative;
+    left: 42%;
+   bottom: 20vh;
+    align-items: center;
+   justify-content: center;
+   display: flex;
+   height: 5vh;
+   width: 25vh;
+   margin-top: 3vh;
+   color: aliceblue;
+   background-color: #5B0B9B;
+   border-radius: 5px;
+   cursor: pointer;
+   border: none;
+}
+
+.nomes{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 89vh;
+    top: 20px;
 }
