@@ -11,24 +11,44 @@
 </head>
 <body>
     <header>
+
         <div class="quadrado"></div>
+
+     
+
     </header>
     <main>
-        <h1>TopLingo</h1>
+        <div>
+            <h1>TopLingo</h1>
+            <div class="button">
+                <div class="bola"></div>
+            <script>
+                document.querySelector('.bola').addEventListener('click', (e)=>{
+                    e.target.classList.toggle('bola-move')
+                    document.body.classList.toggle('escuro')
+                })
+            </script>
+            </div>
+
+        </div>
          <section>
 
 
                 <div class="ptr">
-                    <input  id="TextoEntra" type="text" required placeholder="Olá Mundo!">
+                    <button id="botaoFalar"><img src="./img/microfone.png" alt=""></button>
+                    <input  id="TextoEntra" type="text" required placeholder="Digite o texto">
                     <div class="line"></div>
-                    <img class="imgptr" src="./img/br.png" alt="">
+                    <form >
+                        <select name="idiomas" class="selectForm"></select>
+                    
+                    </form>
                 </div>
-
-
                 <div class="ing">
-                    <input  id="TextoSai" type="text" placeholder="Hello World!">
+                    <input  id="TextoSai" type="text" placeholder="Traduzir">
                     <div class="line"></div>
-                    <img class="imgen" src="./img/usa.png" alt="">
+                    <form >
+                        <select name="idiomas" class="selectForm"></select>
+                    </form>
                 </div>
 
             </section>

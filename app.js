@@ -14,11 +14,11 @@ const linguas = {
 selects.forEach((tag) => {
   for (paises in linguas) {
   let selected;
-   if (tag.className.includes("selectFrom") && paises == "pt-BR") {
+   if (tag.className.includes("selectFrom") && paises == "pt-BR" ) {
      selected = "selected";
-   } else if (tag.className.includes("selectTo") && paises == "en-GB") {
+   } else if (tag.className.includes("selectTo") && paises == "en-GB" ) {
   selected = "selected";
- }
+ } 
 
    const option = `<option value="${paises}" ${selected}>${linguas[paises]}</option>`;
 
@@ -36,11 +36,10 @@ Traduzir.addEventListener("click", () => {
 
 function TraduzirLoad() {
   fetch(
-    `https://api.mymemory.translated.net/get?q=${textoEntra.value}&langpair=pt-BR|en-GB`
+    `https://api.mymemory.translated.net/get?q=${textoEntra.value}&langpair=${selects[0].value}|${selects[1].value}`
   )
     .then((res) => res.json())
     .then((data) => {
-        console.log(textoEntra)
       textoSai.value = data.responseData.translatedText;
     });
 }
