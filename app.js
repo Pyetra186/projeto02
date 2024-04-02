@@ -2,6 +2,11 @@ const textoEntra = document.querySelector("#TextoEntra");
 const textoSai = document.querySelector("#TextoSai");
 const Traduzir = document.querySelector("#Traduzir");
 const selects = document.querySelectorAll("select");
+const botaoFalar = document.getElementById('botaoFalar')
+const text = document.querySelector('#TextoEntra')
+  const recognition = createRecognition()
+
+  
 
 const linguas = {
   "en-GB": "Inglês",
@@ -43,3 +48,36 @@ function TraduzirLoad() {
       textoSai.value = data.responseData.translatedText;
     });
 }
+
+let listening = false
+  
+  botaoFalar.addEventListener('click', e => {
+      if(!recognition) return
+  
+      listening ? recognition.stop() : recognition.start()
+  
+      btnFalar.innerHTML = listening? '': 'Parar de escutar'
+      TraduzirLoad()
+  })
+
+  function createRecognition(){
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition  
+    const recognition = SpeechRecognition !== undefined ? new SpeechRecognition() : null
+    if(!recognition){
+        text.innerHTML = "Speech não encontrado"
+        return false
+    }
+
+    recognition.lang = "pt_BR"
+
+    recognition.onstart = () => console.log('started')
+    recognition.onend = () => console.log('finished')
+    recognition.onerror = e => console.log('error', e)
+    recognition.onresult = e => text.value = e.results[0] [0].transcript
+    return recognition
+
+  }
+  
+
+
+
