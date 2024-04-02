@@ -76,7 +76,52 @@ let listening = false
     recognition.onresult = e => text.value = e.results[0] [0].transcript
     return recognition
 
+
   }
+
+
+const voices = document.getElementById('voices')
+const btnVoz = document.getElementById('botaoVoz')
+
+window.speechSynthesis.onvoiceschanged = () => {
+    let voicesList = window.speechSynthesis.getVoices()
+    voices.innerHTML = ''
+
+    if (voicesList.length > 0) {
+        for (let i = 0; i < voicesList.length; i++) {
+            let optionEl = document.createElement('option')
+            optionEl.setAttribute('value', i)
+            optionEl.innerHTML = voicesList[i].name
+            voices.appendChild(optionEl)
+        }
+    } else {
+        // Caso não haja vozes disponíveis
+        let optionEl = document.createElement('option')
+        optionEl.innerHTML = 'Nenhuma voz disponível'
+        voices.appendChild(optionEl)
+    }
+};
+
+btnVoz.addEventListener('click', () => {
+    if (textoSai.value !== "") {
+        let ut = new SpeechSynthesisUtterance(textoSai.value)
+        let selectedVoiceIndex = voices.value
+        ut.voice = window.speechSynthesis.getVoices()[selectedVoiceIndex]
+        window.speechSynthesis.speak(ut)
+    }
+});
+
+function updateStatus(){
+    if (window.speechSynthesis.speaking){
+        voices.setAttribute('disabled', 'disabled')
+        btnVoz.setAttribute('disabled', 'disabled')
+    }else{
+        voices.removeAttribute('disabled')
+        btnVoz.removeAttribute('disabled')
+    
+    }
+}
+setInterval(updateStatus,100)
   
 
 
