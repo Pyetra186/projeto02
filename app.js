@@ -122,6 +122,15 @@ function updateStatus(){
     }
 }
 setInterval(updateStatus,100)
+
+extoEntra.addEventListener("keyup", () => {
+  let inputValue = textoEntra.value.toLowerCase();
+  if (inputValue.includes("alice")) {
+      document.body.classList.add("alice-background");
+  } else {
+      document.body.classList.remove("alice-background");
+  }
+});
   
 
 

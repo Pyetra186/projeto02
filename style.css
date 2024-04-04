@@ -202,3 +202,7 @@ footer{
     margin-left: 90vh;
     top: 20px;
 }
+
+.alice-background {
+    background-color: rgb(17, 1, 37);
+  }
